@@ -1,0 +1,77 @@
+@charset "UTF-8";
+@import "font.css";
+
+.navbar {
+    background-color: #6D4C41;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+input {
+    margin: 1rem 0;
+}
+
+
+/* 메인 페이지 */
+
+.main {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.title {
+    padding: .25rem .3rem;
+    font-weight: bold;
+    font-size: 2rem;
+    background-color: #6D4C41;
+    color: #ffffff;
+    border-top: 3px solid #6D4C41;
+    display: inline-block;
+}
+
+.description {
+    padding-bottom: .75rem;
+    font-size: 1rem;
+    color: #6D4C41;
+}
+
+.main-area {
+    text-align: center;
+}
+
+.main-btn {
+    background-color: #6D4C41;
+    color: #EFEBE9;
+}
+
+.main-btn:hover {
+    background-color: #5D4037;
+    color: #ffffff;
+}
+
+
+/* 문제 페이지 */
+
+.word {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #6D4C41;
+}
+
+.mean {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: left;
+    font-size: 1rem;
+    line-height: 4rem;
+    border-bottom: 1px solid #6D4C41;
+}
+
+.mean > p {
+    margin-bottom: 0;
+    display: inline-block;
+    line-height: normal;
+    vertical-align: middle;
+}

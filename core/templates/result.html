@@ -1,20 +1,26 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>영어 퀴즈</title>
-</head>
-<body>
-<h1>영어 퀴즈 사이트</h1>
-<h1>반갑습니다, {{ username }}님!</h1>
-<p>{{ score }}문제를 맞추었습니다.</p>
+{% extends 'base.html' %}
 
-{% for id, user_word, word, mean in result %}
-    {% if user_word == word %}
-        <p>[OK] {{ id }}, {{ user_word }}, {{ word }}, {{ mean }}</p>
-    {% else %}
-        <p>{{ id }}, {{ user_word }}, {{ word }}, {{ mean }}</p>
-    {% endif %}
-{% endfor %}
-</body>
-</html>
+{% block content %}
+
+    <section class="main container">
+        <div class="row">
+            <div class="col-12 offset-md-2 col-md-8">
+                <h2 class="title">퀴즈 결과</h2>
+                <h3 class="description">영단어 퀴즈의 결과입니다. 귀하는 총 <b><u>{{ score }}문제</u></b>를 맞추셨습니다!</h3>
+            </div>
+            <div class="main-area container col-12 offset-md-2 col-md-8">
+                <div class="row">
+                    <div class="mean col-6 col-md-2"><p>사용자 입력</p></div>
+                    <div class="mean col-6 col-md-2"><p>정답</p></div>
+                    <div class="mean col-12 col-md-8"><p>문제</p></div>
+                    {% for id, user_word, word, mean in result %}
+                        <div class="mean col-6 col-md-2"><p>{{ user_word }}</p></div>
+                        <div class="mean col-6 col-md-2"><p>{{ word }}</p></div>
+                        <div class="mean col-12 col-md-8"><p>{{ mean }}</p></div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
