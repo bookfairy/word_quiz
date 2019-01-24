@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>영어 퀴즈</title>
+</head>
+<body>
+<h1>영어 퀴즈 사이트</h1>
+<h1>반갑습니다, {{ username }}님!</h1>
+<p>아래에는 랜덤으로 정렬된 문제들이 나열되어있습니다.</p>
+<p>단어의 뜻을 보고, 알맞 단어를 맞춰주세요!</p>
+
+<form action="{% url 'result' %}" method="POST">
+    {% for id, mean in dicts %}
+        <input type="text" name="word{{ id }}">
+        : {{ mean }}<br>
+    {% endfor %}
+    <input type="submit" value="제출하기">
+</form>
+
+
+</body>
+</html>

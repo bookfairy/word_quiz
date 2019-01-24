@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>영어 퀴즈</title>
+</head>
+<body>
+<h1>영어 퀴즈 사이트</h1>
+<p>당신의 이름을 입력하세요</p>
+<form action="{% url 'quiz' %}" method="POST">
+    <input type="text" name="username">
+    <input type="submit" value="제출하기">
+</form>
+</body>
+</html>

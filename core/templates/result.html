@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>영어 퀴즈</title>
+</head>
+<body>
+<h1>영어 퀴즈 사이트</h1>
+<h1>반갑습니다, {{ username }}님!</h1>
+<p>{{ score }}문제를 맞추었습니다.</p>
+
+{% for id, user_word, word, mean in result %}
+    {% if user_word == word %}
+        <p>[OK] {{ id }}, {{ user_word }}, {{ word }}, {{ mean }}</p>
+    {% else %}
+        <p>{{ id }}, {{ user_word }}, {{ word }}, {{ mean }}</p>
+    {% endif %}
+{% endfor %}
+</body>
+</html>
